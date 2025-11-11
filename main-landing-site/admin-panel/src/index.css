@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poetsen+One&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --marlo-dark: #1A1A1A;
+  --marlo-gray: #999999;
+  --marlo-red: #D20C34;
+  --marlo-light-gray: #333333;
+
+
+  font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--marlo-dark); 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--marlo-dark);
+  color: var(--marlo-gray);
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  font-weight: 500;
+  color: var(--marlo-red); 
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #a00928; 
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: 'Poetsen One', sans-serif; 
+  color: white;
+}
+
+
+@layer components {
+  .form-field {
+    @apply mb-4;
+  }
+
+  .form-field label {
+    @apply block text-marlo-gray text-sm mb-1;
+  }
+
+  
+
+  .form-field input:read-only {
+    @apply text-marlo-gray;
+  }
+
+  .btn-primary {
+    @apply bg-marlo-red text-white py-3 px-6 rounded-lg font-montserrat text-sm font-medium cursor-pointer border-none transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500;
+  }
+
+  .btn-secondary {
+    @apply bg-marlo-light-gray text-white border border-marlo-light-gray py-3 px-6 rounded-lg font-montserrat text-sm font-medium cursor-pointer transition-colors hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500;
+  }
+}
